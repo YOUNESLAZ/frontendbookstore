@@ -9,7 +9,7 @@ function Freebook() {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/book");
+        const response = await axios.get("https://backend-bookapp.onrender.com/book");
         const data = response.data.filter((book) => book.category === "Free");
         setBooks(data);
       } catch (error) {
@@ -22,7 +22,7 @@ function Freebook() {
 
   const handleDeleteBook = async (bookId) => {
     try {
-      await axios.delete(`http://localhost:4001/book/${bookId}`);
+      await axios.delete(`https://backend-bookapp.onrender.com/book/${bookId}`);
       setBooks((prevBooks) => prevBooks.filter((book) => book._id !== bookId));
     } catch (error) {
       console.error("Error deleting book:", error);

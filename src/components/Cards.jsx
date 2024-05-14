@@ -5,7 +5,7 @@ import Book from "../../../Backend/model/book.model";
 function Cards({ item, onDelete }) {
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:4001/book/delete/${item._id}`);
+      const response = await axios.delete(`https://backend-bookapp.onrender.com/book/delete/${item._id}`);
       console.log(response.status)
     } catch (error) {
       console.error("Error deleting book:", error);
