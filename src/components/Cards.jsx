@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import Book from "../../../Backend/model/book.model";
 
 function Cards({ item, onDelete }) {
   const handleDelete = async () => {
